@@ -22,9 +22,9 @@ public class test {
             payloadBuilder.setAlertBody("Example!");
 
             final String payload = payloadBuilder.build();
-            final String token = TokenUtil.sanitizeTokenString("9e9230c12238df839e3c4cd2a0261742c514f3ea1f4bcc57e8fda71f8fb4a044");
+            final String token = TokenUtil.sanitizeTokenString("<8df5d344fefd24947bb92d4344c3fd79>");
 
-            final SimpleApnsPushNotification pushNotification = new SimpleApnsPushNotification(token, "com.example.myApp", payload);
+            final SimpleApnsPushNotification pushNotification = new SimpleApnsPushNotification(token, "com.esct.omessage", payload);
 
             final PushNotificationFuture<SimpleApnsPushNotification, PushNotificationResponse<SimpleApnsPushNotification>>
                     sendNotificationFuture = apnsClient.sendNotification(pushNotification);
